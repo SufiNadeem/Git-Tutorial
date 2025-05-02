@@ -1,0 +1,30 @@
+yum install docker -y
+docker --version
+systemctl start docker
+systemctl status docker
+useradd dockeradmin
+passwd
+usermod -aG docker dockeradmin
+docker pull tomcat
+docker images
+docker run -d --name tomcat-container -p 8081:8080 tomcat
+NOTE: Page is not working, why?
+NOTE: Add port 8081 -> to "inbound rules"
+docker ps
+docker ps -a
+docker ps -a
+CHECK UI with AWS EC2 Instance Public IP:8081
+docker exec -it tomcat-container /bin/bash
+Note: Once in container run
+ls
+check webapps and webapps.dist
+copy from webapps.dst => webapps
+cp -R * ../webapps
+Page SHOULD BE LOADING
+NOTE: Let us STOP the container!
+docker ps -a
+docker stop tomcat-container
+docker ps -a
+docker ps
+docker run -d --name tomcat2 -p 8082:8080 tomcat:latest
+docker ps
