@@ -1,0 +1,31 @@
+Follow the STEPS below to generate SSH Keys and 
+STEP1:
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Note: Replace "your_email@example.com" => user email
+$ git config user.name
+mike.mill
+ssh-keygen -t rsa -b 4096 -C "mike.mill@adptech.com"
+
+STEP2:
+$ eval "$(ssh-agent -s)"
+Agent pid 459
+
+STEP3:
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/nsidd/.ssh/id_rsa (mike.mill@adptech.com)
+NOTE: (Replace id_rsa with your actual GitHub private key file if it's different, like id_ed25519.)
+
+STEP4: The command below will "copy" the keys for you
+clip < ~/.ssh/id_rsa.pub
+Open "Notepad" and paste the key using "Cntrl+v" on your keyboard
+STEP 5
+Click on "Settings"
+Click on "SSH and GPG Keys"
+Click on "New SSH Key"
+1. Add Title
+2. Add Description
+3. "Cntrl+v" and paste then 
+4. Finally "add ssh key"
+
+Final Note:
+You are now ready to "push" and "pull" code between your local PC and remote GitHub Repository

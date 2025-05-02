@@ -1,0 +1,24 @@
+Best Practice for Deleting Files in Git (Local + GitHub):
+Navigate to your local repo on your PC:
+==============================================================
+STEP 1: 
+Open Git Bash in your local repo
+
+STEP 2:
+$git rm <full filename> (for example, index.txt.txt)
+Note: Use git rm -r foldername/ if you're deleting a folder.
+Note: You can also use rm file.txt and then git rm file.txt (or git add -u), but git rm is cleaner.
+
+STEP 3: Commit the change:
+$git commit -m "Remove file.txt from project"
+
+STEP 4: Push the changes to GitHub:
+$git push origin master
+Replace main with your branch name if different.
+
+🛑 Don’t:
+Don’t manually delete files directly on GitHub via the web and then pull — it can cause merge conflicts if the local repo still tracks them.
+
+Don’t forget to commit after deleting, or Git won’t recognize the change.
+
+Would you like a script to automate this for multiple files or folders?
