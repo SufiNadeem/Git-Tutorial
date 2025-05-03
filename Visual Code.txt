@@ -4,3 +4,6 @@ https://code.visualstudio.com/download
 
 Please watch this video (Courtesy of Zawar Ali)
 https://www.youtube.com/watch?v=B-s71n0dHUk
+
+How to connect VScode to AWS EC-2 Instance (via Windows Machine)
+https://www.youtube.com/watch?v=dS0dX3SGMAM
