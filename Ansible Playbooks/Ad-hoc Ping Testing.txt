@@ -1,0 +1,2 @@
+Ping Yaml File
+ansible all -m ping
